@@ -1,0 +1,1097 @@
+{
+    "openconfig-interfaces:interfaces": {
+        "interface": [
+            {
+                "config": {
+                    "description": "to port6.sandbox-backend",
+                    "enabled": true,
+                    "name": "GigabitEthernet1",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "name": "GigabitEthernet1",
+                "openconfig-if-ethernet:ethernet": {
+                    "config": {
+                        "auto-negotiate": true,
+                        "enable-flow-control": true,
+                        "mac-address": "52:54:00:0c:e3:06"
+                    },
+                    "state": {
+                        "auto-negotiate": true,
+                        "counters": {
+                            "in-8021q-frames": "0",
+                            "in-crc-errors": "0",
+                            "in-fragment-frames": "0",
+                            "in-jabber-frames": "0",
+                            "in-mac-control-frames": "0",
+                            "in-mac-pause-frames": "0",
+                            "in-oversize-frames": "0",
+                            "out-8021q-frames": "0",
+                            "out-mac-control-frames": "0",
+                            "out-mac-pause-frames": "0"
+                        },
+                        "enable-flow-control": false,
+                        "hw-mac-address": "52:54:00:0c:e3:06",
+                        "mac-address": "52:54:00:0c:e3:06",
+                        "negotiated-duplex-mode": "FULL",
+                        "negotiated-port-speed": "openconfig-if-ethernet:SPEED_1GB",
+                        "port-speed": "openconfig-if-ethernet:SPEED_1GB"
+                    }
+                },
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "194406",
+                        "in-unicast-pkts": "1962",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1661464868000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "1697870",
+                        "out-unicast-pkts": "2863"
+                    },
+                    "description": "to port6.sandbox-backend",
+                    "enabled": true,
+                    "ifindex": 1,
+                    "last-change": "1661464987316000000",
+                    "name": "GigabitEthernet1",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "description": "to port6.sandbox-backend",
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.20.175",
+                                                "prefix-length": 24
+                                            },
+                                            "ip": "10.10.20.175",
+                                            "state": {
+                                                "ip": "10.10.20.175",
+                                                "prefix-length": 24
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "153105",
+                                        "in-pkts": "1779",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "2857",
+                                        "out-octets": "1697510",
+                                        "out-pkts": "2857"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "194406",
+                                    "in-unicast-pkts": "1962",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1661464868000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "1697870",
+                                    "out-unicast-pkts": "2863"
+                                },
+                                "description": "to port6.sandbox-backend",
+                                "enabled": true,
+                                "ifindex": 1,
+                                "last-change": "1661464987316000000",
+                                "name": "GigabitEthernet1",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "description": "L3 Link to core-rtr01",
+                    "enabled": true,
+                    "name": "GigabitEthernet2",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "name": "GigabitEthernet2",
+                "openconfig-if-ethernet:ethernet": {
+                    "config": {
+                        "auto-negotiate": true,
+                        "enable-flow-control": true,
+                        "mac-address": "52:54:00:0f:de:0d"
+                    },
+                    "state": {
+                        "auto-negotiate": true,
+                        "counters": {
+                            "in-8021q-frames": "0",
+                            "in-crc-errors": "0",
+                            "in-fragment-frames": "0",
+                            "in-jabber-frames": "0",
+                            "in-mac-control-frames": "0",
+                            "in-mac-pause-frames": "0",
+                            "in-oversize-frames": "0",
+                            "out-8021q-frames": "0",
+                            "out-mac-control-frames": "0",
+                            "out-mac-pause-frames": "0"
+                        },
+                        "enable-flow-control": false,
+                        "hw-mac-address": "52:54:00:0f:de:0d",
+                        "mac-address": "52:54:00:0f:de:0d",
+                        "negotiated-duplex-mode": "FULL",
+                        "negotiated-port-speed": "openconfig-if-ethernet:SPEED_1GB",
+                        "port-speed": "openconfig-if-ethernet:SPEED_1GB"
+                    }
+                },
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1661464868000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "59200",
+                        "out-unicast-pkts": "540"
+                    },
+                    "description": "L3 Link to core-rtr01",
+                    "enabled": true,
+                    "ifindex": 2,
+                    "last-change": "1661464987320000000",
+                    "name": "GigabitEthernet2",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "description": "L3 Link to core-rtr01",
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "172.16.252.21",
+                                                "prefix-length": 30
+                                            },
+                                            "ip": "172.16.252.21",
+                                            "state": {
+                                                "ip": "172.16.252.21",
+                                                "prefix-length": 30
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "536",
+                                        "out-octets": "58960",
+                                        "out-pkts": "536"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1661464868000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "59200",
+                                    "out-unicast-pkts": "540"
+                                },
+                                "description": "L3 Link to core-rtr01",
+                                "enabled": true,
+                                "ifindex": 2,
+                                "last-change": "1661464987320000000",
+                                "name": "GigabitEthernet2",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "description": "L3 Link to core-rtr02",
+                    "enabled": true,
+                    "name": "GigabitEthernet3",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "name": "GigabitEthernet3",
+                "openconfig-if-ethernet:ethernet": {
+                    "config": {
+                        "auto-negotiate": true,
+                        "enable-flow-control": true,
+                        "mac-address": "52:54:00:19:5a:e3"
+                    },
+                    "state": {
+                        "auto-negotiate": true,
+                        "counters": {
+                            "in-8021q-frames": "0",
+                            "in-crc-errors": "0",
+                            "in-fragment-frames": "0",
+                            "in-jabber-frames": "0",
+                            "in-mac-control-frames": "0",
+                            "in-mac-pause-frames": "0",
+                            "in-oversize-frames": "0",
+                            "out-8021q-frames": "0",
+                            "out-mac-control-frames": "0",
+                            "out-mac-pause-frames": "0"
+                        },
+                        "enable-flow-control": false,
+                        "hw-mac-address": "52:54:00:19:5a:e3",
+                        "mac-address": "52:54:00:19:5a:e3",
+                        "negotiated-duplex-mode": "FULL",
+                        "negotiated-port-speed": "openconfig-if-ethernet:SPEED_1GB",
+                        "port-speed": "openconfig-if-ethernet:SPEED_1GB"
+                    }
+                },
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1661464868000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "59200",
+                        "out-unicast-pkts": "540"
+                    },
+                    "description": "L3 Link to core-rtr02",
+                    "enabled": true,
+                    "ifindex": 3,
+                    "last-change": "1661464987322000000",
+                    "name": "GigabitEthernet3",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "description": "L3 Link to core-rtr02",
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "172.16.252.25",
+                                                "prefix-length": 30
+                                            },
+                                            "ip": "172.16.252.25",
+                                            "state": {
+                                                "ip": "172.16.252.25",
+                                                "prefix-length": 30
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "537",
+                                        "out-octets": "59070",
+                                        "out-pkts": "537"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1661464868000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "59200",
+                                    "out-unicast-pkts": "540"
+                                },
+                                "description": "L3 Link to core-rtr02",
+                                "enabled": true,
+                                "ifindex": 3,
+                                "last-change": "1661464987322000000",
+                                "name": "GigabitEthernet3",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "description": "L3 Link to dist-sw01",
+                    "enabled": true,
+                    "name": "GigabitEthernet4",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "name": "GigabitEthernet4",
+                "openconfig-if-ethernet:ethernet": {
+                    "config": {
+                        "auto-negotiate": true,
+                        "enable-flow-control": true,
+                        "mac-address": "52:54:00:05:1b:f7"
+                    },
+                    "state": {
+                        "auto-negotiate": true,
+                        "counters": {
+                            "in-8021q-frames": "0",
+                            "in-crc-errors": "0",
+                            "in-fragment-frames": "0",
+                            "in-jabber-frames": "0",
+                            "in-mac-control-frames": "0",
+                            "in-mac-pause-frames": "0",
+                            "in-oversize-frames": "0",
+                            "out-8021q-frames": "0",
+                            "out-mac-control-frames": "0",
+                            "out-mac-pause-frames": "0"
+                        },
+                        "enable-flow-control": false,
+                        "hw-mac-address": "52:54:00:05:1b:f7",
+                        "mac-address": "52:54:00:05:1b:f7",
+                        "negotiated-duplex-mode": "FULL",
+                        "negotiated-port-speed": "openconfig-if-ethernet:SPEED_1GB",
+                        "port-speed": "openconfig-if-ethernet:SPEED_1GB"
+                    }
+                },
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "72313",
+                        "in-unicast-pkts": "707",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1661464868000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "65624",
+                        "out-unicast-pkts": "575"
+                    },
+                    "description": "L3 Link to dist-sw01",
+                    "enabled": true,
+                    "ifindex": 4,
+                    "last-change": "1661464987322000000",
+                    "name": "GigabitEthernet4",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "description": "L3 Link to dist-sw01",
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "172.16.252.2",
+                                                "prefix-length": 30
+                                            },
+                                            "ip": "172.16.252.2",
+                                            "state": {
+                                                "ip": "172.16.252.2",
+                                                "prefix-length": 30
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "49960",
+                                        "in-pkts": "602",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "567",
+                                        "out-octets": "65198",
+                                        "out-pkts": "567"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "72313",
+                                    "in-unicast-pkts": "707",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1661464868000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "65624",
+                                    "out-unicast-pkts": "575"
+                                },
+                                "description": "L3 Link to dist-sw01",
+                                "enabled": true,
+                                "ifindex": 4,
+                                "last-change": "1661464987322000000",
+                                "name": "GigabitEthernet4",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "description": "L3 Link to dist-sw02",
+                    "enabled": true,
+                    "name": "GigabitEthernet5",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "name": "GigabitEthernet5",
+                "openconfig-if-ethernet:ethernet": {
+                    "config": {
+                        "auto-negotiate": true,
+                        "enable-flow-control": true,
+                        "mac-address": "52:54:00:09:75:85"
+                    },
+                    "state": {
+                        "auto-negotiate": true,
+                        "counters": {
+                            "in-8021q-frames": "0",
+                            "in-crc-errors": "0",
+                            "in-fragment-frames": "0",
+                            "in-jabber-frames": "0",
+                            "in-mac-control-frames": "0",
+                            "in-mac-pause-frames": "0",
+                            "in-oversize-frames": "0",
+                            "out-8021q-frames": "0",
+                            "out-mac-control-frames": "0",
+                            "out-mac-pause-frames": "0"
+                        },
+                        "enable-flow-control": false,
+                        "hw-mac-address": "52:54:00:09:75:85",
+                        "mac-address": "52:54:00:09:75:85",
+                        "negotiated-duplex-mode": "FULL",
+                        "negotiated-port-speed": "openconfig-if-ethernet:SPEED_1GB",
+                        "port-speed": "openconfig-if-ethernet:SPEED_1GB"
+                    }
+                },
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "72711",
+                        "in-unicast-pkts": "710",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1661464868000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "65452",
+                        "out-unicast-pkts": "575"
+                    },
+                    "description": "L3 Link to dist-sw02",
+                    "enabled": true,
+                    "ifindex": 5,
+                    "last-change": "1661464983580000000",
+                    "name": "GigabitEthernet5",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "description": "L3 Link to dist-sw02",
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "172.16.252.10",
+                                                "prefix-length": 30
+                                            },
+                                            "ip": "172.16.252.10",
+                                            "state": {
+                                                "ip": "172.16.252.10",
+                                                "prefix-length": 30
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "50106",
+                                        "in-pkts": "603",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "566",
+                                        "out-octets": "64912",
+                                        "out-pkts": "566"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "72711",
+                                    "in-unicast-pkts": "710",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1661464868000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "65452",
+                                    "out-unicast-pkts": "575"
+                                },
+                                "description": "L3 Link to dist-sw02",
+                                "enabled": true,
+                                "ifindex": 5,
+                                "last-change": "1661464983580000000",
+                                "name": "GigabitEthernet5",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "description": "L3 Link to dist-rtr02",
+                    "enabled": true,
+                    "name": "GigabitEthernet6",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "name": "GigabitEthernet6",
+                "openconfig-if-ethernet:ethernet": {
+                    "config": {
+                        "auto-negotiate": true,
+                        "enable-flow-control": true,
+                        "mac-address": "52:54:00:1e:fd:a4"
+                    },
+                    "state": {
+                        "auto-negotiate": true,
+                        "counters": {
+                            "in-8021q-frames": "0",
+                            "in-crc-errors": "0",
+                            "in-fragment-frames": "0",
+                            "in-jabber-frames": "0",
+                            "in-mac-control-frames": "0",
+                            "in-mac-pause-frames": "0",
+                            "in-oversize-frames": "0",
+                            "out-8021q-frames": "0",
+                            "out-mac-control-frames": "0",
+                            "out-mac-pause-frames": "0"
+                        },
+                        "enable-flow-control": false,
+                        "hw-mac-address": "52:54:00:1e:fd:a4",
+                        "mac-address": "52:54:00:1e:fd:a4",
+                        "negotiated-duplex-mode": "FULL",
+                        "negotiated-port-speed": "openconfig-if-ethernet:SPEED_1GB",
+                        "port-speed": "openconfig-if-ethernet:SPEED_1GB"
+                    }
+                },
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "67222",
+                        "in-unicast-pkts": "580",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1661464868000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "66002",
+                        "out-unicast-pkts": "574"
+                    },
+                    "description": "L3 Link to dist-rtr02",
+                    "enabled": true,
+                    "ifindex": 6,
+                    "last-change": "1661464983581000000",
+                    "name": "GigabitEthernet6",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "description": "L3 Link to dist-rtr02",
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "172.16.252.17",
+                                                "prefix-length": 30
+                                            },
+                                            "ip": "172.16.252.17",
+                                            "state": {
+                                                "ip": "172.16.252.17",
+                                                "prefix-length": 30
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "65838",
+                                        "in-pkts": "567",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "569",
+                                        "out-octets": "65702",
+                                        "out-pkts": "569"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "67222",
+                                    "in-unicast-pkts": "580",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1661464868000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "66002",
+                                    "out-unicast-pkts": "574"
+                                },
+                                "description": "L3 Link to dist-rtr02",
+                                "enabled": true,
+                                "ifindex": 6,
+                                "last-change": "1661464983581000000",
+                                "name": "GigabitEthernet6",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "description": "to",
+                    "enabled": false,
+                    "name": "Loopback0",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback0",
+                "state": {
+                    "admin-status": "DOWN",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1661464868000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "description": "to",
+                    "enabled": false,
+                    "ifindex": 9,
+                    "last-change": "1661464986224000000",
+                    "name": "Loopback0",
+                    "oper-status": "DOWN",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "description": "to",
+                                "enabled": false,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "DOWN",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1661464868000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "description": "to",
+                                "enabled": false,
+                                "ifindex": 9,
+                                "last-change": "1661464986224000000",
+                                "name": "Loopback0",
+                                "oper-status": "DOWN"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
