@@ -23,6 +23,7 @@ $ source /REST_Connector/bin/activate
 ```console
 (REST_Connector) ~/pyATS_REST_Connector_Example$ pip install pyats[full]
 (REST_Connector) ~/pyATS_REST_Connector_Example$ pip install tabulate
+(REST_Connector) ~/pyATS_REST_Connector_Example$ pip install rest.connector
 ```
 
 ## Run the code
