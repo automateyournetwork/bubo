@@ -9,7 +9,7 @@ def main(runtime):
     if not runtime.testbed:
         # If no testbed is provided, load the default one.
         # Load default location of Testbed
-        testbedfile = os.path.join('testbed.yaml')
+        testbedfile = os.path.join('intent.yaml')
         testbed = load(testbedfile)
     else:
         # Use the one provided

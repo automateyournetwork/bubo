@@ -2,6 +2,7 @@ import json
 import logging
 from pyats import aetest
 from pyats.log.utils import banner
+from genie.utils.diff import Diff
 from tabulate import tabulate
 
 # ----------------
@@ -43,16 +44,16 @@ class Test_Interfaces(aetest.Testcase):
         # Loop over devices in tested for testing
     
     @aetest.test
-    def get_yang_data(self):
+    def get_pre_test_yang_data(self):
         # Use the RESTCONF OpenConfig YANG Model 
         parsed_openconfig_interfaces = self.device.rest.get("/restconf/data/openconfig-interfaces:interfaces")
         # Get the JSON payload
         self.parsed_json=parsed_openconfig_interfaces.json()
 
     @aetest.test
-    def create_files(self):
+    def create_pre_test_files(self):
         # Create .JSON file
-        with open(f'{self.device.alias}_OpenConfig_Interfaces.json', 'w') as f:
+        with open(f'JSON/{self.device.alias}_OpenConfig_Interfaces_PRE_TEST.json', 'w') as f:
             f.write(json.dumps(self.parsed_json, indent=4, sort_keys=True))
     
     @aetest.test
@@ -89,7 +90,6 @@ class Test_Interfaces(aetest.Testcase):
                             tablefmt='orgtbl'))
         # should we pass or fail?
         if self.failed_interfaces:
-            aetest.loop.mark(name = self.failed_interfaces.keys())
             self.failed('Some interfaces have input discards')
         else:
             self.passed('No interfaces have input discards')
@@ -128,7 +128,6 @@ class Test_Interfaces(aetest.Testcase):
                             tablefmt='orgtbl'))
         # should we pass or fail?
         if self.failed_interfaces:
-            aetest.loop.mark(name = self.failed_interfaces.keys())
             self.failed('Some interfaces have input errors')
         else:
             self.passed('No interfaces have input errors')
@@ -167,7 +166,6 @@ class Test_Interfaces(aetest.Testcase):
                             tablefmt='orgtbl'))
         # should we pass or fail?
         if self.failed_interfaces:
-            aetest.loop.mark(name = self.failed_interfaces.keys())
             self.failed('Some interfaces have input fcs errors')
         else:
             self.passed('No interfaces have input fcs errors')
@@ -206,7 +204,6 @@ class Test_Interfaces(aetest.Testcase):
                             tablefmt='orgtbl'))
         # should we pass or fail?
         if self.failed_interfaces:
-            aetest.loop.mark(name = self.failed_interfaces.keys())
             self.failed('Some interfaces have input unknown protocols')
         else:
             self.passed('No interfaces have input unknwon protocols')
@@ -245,7 +242,6 @@ class Test_Interfaces(aetest.Testcase):
                             tablefmt='orgtbl'))
         # should we pass or fail?
         if self.failed_interfaces:
-            aetest.loop.mark(name = self.failed_interfaces.keys())
             self.failed('Some interfaces have output discards')
         else:
             self.passed('No interfaces have output discards')
@@ -284,7 +280,6 @@ class Test_Interfaces(aetest.Testcase):
                             tablefmt='orgtbl'))
         # should we pass or fail?
         if self.failed_interfaces:
-            aetest.loop.mark(name = self.failed_interfaces.keys())
             self.failed('Some interfaces have output errors')
         else:
             self.passed('No interfaces have output errors')
@@ -324,10 +319,131 @@ class Test_Interfaces(aetest.Testcase):
                             tablefmt='orgtbl'))
         # should we pass or fail?
         if self.failed_interfaces:
-            aetest.loop.mark(name = self.failed_interfaces.keys())
             self.failed('Some interfaces have are half duplex')
         else:
             self.passed('All interfaces are full duplex')
+
+    @aetest.test
+    def test_interface_admin_oper_status(self):
+        # Test for input discards
+        self.failed_interfaces = {}
+        table_data = []
+        for intf in self.parsed_json['openconfig-interfaces:interfaces']['interface']:
+            if 'admin-status' in intf['state']:            
+                admin_status = intf['state']['admin-status']
+                oper_status = intf['state']['oper-status']
+                table_row = []
+                table_row.append(self.device.alias)
+                table_row.append(intf['name'])
+                table_row.append(admin_status)
+                table_row.append(oper_status)
+                if oper_status != admin_status:
+                    table_row.append('Failed')
+                    self.failed_interfaces[intf['name']] = oper_status
+                    self.interface_name = intf['name']
+                    self.error_counter = self.failed_interfaces[intf['name']]
+                else:
+                    table_row.append('Passed')
+                table_data.append(table_row)
+                # display the table
+        log.info(tabulate(table_data,
+                            headers=['Device', 'Interface',
+                                    'Admin Status',
+                                    'Oper_Status',
+                                    'Passed/Failed'],
+                            tablefmt='orgtbl'))
+        # should we pass or fail?
+        if self.failed_interfaces:
+            self.failed('Some interfaces are admin / oper state mismatch')
+        else:
+            self.passed('All interfaces admin / oper state match')
+
+    @aetest.test
+    def test_interface_description_matches_intent(self):
+        # Test for input discards
+        self.failed_interfaces = {}
+        table_data = []
+        for self.intf in self.parsed_json['openconfig-interfaces:interfaces']['interface']:
+            if 'description' in self.intf['config']:
+                for interface,value in self.device.custom.interfaces.items():
+                    if self.intf['name'] == interface:
+                        self.intended_desc = value['description']
+                        actual_desc = self.intf['config']['description']
+                        table_row = []
+                        table_row.append(self.device.alias)
+                        table_row.append(self.intf['name'])
+                        table_row.append(self.intended_desc)
+                        table_row.append(actual_desc)
+                        if actual_desc != self.intended_desc:
+                            table_row.append('Failed')
+                            self.failed_interfaces[self.intf['name']] = self.intended_desc
+                            self.interface_name = self.intf['name']
+                            self.error_counter = self.failed_interfaces[self.intf['name']]
+                        else:
+                            table_row.append('Passed')
+                        table_data.append(table_row)
+            else:
+                for interface,value in self.device.custom.interfaces.items():
+                    if self.intf['name'] == interface:
+                        self.intended_desc = value['description']
+                        actual_desc = ""
+                        table_row = []
+                        table_row.append(self.device.alias)
+                        table_row.append(self.intf['name'])
+                        table_row.append(self.intended_desc)
+                        table_row.append(actual_desc)
+                        if actual_desc != self.intended_desc:
+                            table_row.append('Failed')
+                            self.failed_interfaces[self.intf['name']] = self.intended_desc
+                            self.interface_name = self.intf['name']
+                            self.error_counter = self.failed_interfaces[self.intf['name']]
+                        table_data.append(table_row)                            
+        # display the table
+        log.info(tabulate(table_data,
+                            headers=['Device', 'Interface',
+                                    'Intent Desc',
+                                    'Actual Desc',
+                                    'Passed/Failed'],
+                            tablefmt='orgtbl'))
+
+        # should we pass or fail?
+        if self.failed_interfaces:
+            self.failed('Some interfaces intent / actual descriptions mismatch', goto = self.update_interface_description())            
+        else:
+            self.passed('All interfaces intent / actual descriptions match')
+
+    def update_interface_description(self):
+        self.pre_change_parsed_json = self.parsed_json
+        payload = json.dumps({
+                        "openconfig-interfaces:description": f"{ self.intended_desc }"
+                    })
+        update_interface_description = self.device.rest.put(f"/restconf/data/openconfig-interfaces:interfaces/interface={ self.intf['name'] }/config/description", payload=payload)
+        log.info(f"The PUT to update the interface {self.intf['name'] } description status code was { update_interface_description }")
+        log.info("Re-testing interface")        
+        self.get_post_test_yang_data()
+        self.create_post_test_files()
+        self.pre_post_diff()
+        self.get_pre_test_yang_data()
+        self.test_interface_description_matches_intent()
+
+    def get_post_test_yang_data(self):
+        # Use the RESTCONF OpenConfig YANG Model 
+        post_parsed_openconfig_interfaces = self.device.rest.get("/restconf/data/openconfig-interfaces:interfaces")
+        # Get the JSON payload
+        self.post_parsed_json=post_parsed_openconfig_interfaces.json()
+
+    def create_post_test_files(self):
+        # Create .JSON file
+        with open(f'JSON/{self.device.alias}_OpenConfig_Interfaces_POST_TEST.json', 'w') as f:
+            f.write(json.dumps(self.post_parsed_json, indent=4, sort_keys=True))
+
+    def pre_post_diff(self):
+        for intf in self.pre_change_parsed_json['openconfig-interfaces:interfaces']['interface']:
+                for interface in self.post_parsed_json['openconfig-interfaces:interfaces']['interface']:
+                    if intf['name'] == interface['name']:
+                        diff = Diff(intf['config'], interface['config'])
+                        diff.findDiff()
+                        log.info(diff)
 
 # ----------------
 # Test Case #1
@@ -352,7 +468,7 @@ class Test_System(aetest.Testcase):
     @aetest.test
     def create_files(self):
         # Create .JSON file
-        with open(f'{self.device.alias}_OpenConfig_System.json', 'w') as f:
+        with open(f'JSON/{self.device.alias}_OpenConfig_System.json', 'w') as f:
             f.write(json.dumps(self.parsed_json, indent=4, sort_keys=True))
     
     @aetest.test
