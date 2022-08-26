@@ -16,7 +16,7 @@ devices:
                 GigabitEthernet6:
                     description: "L3 Link to dist-rtr02"
                 Loopback0:
-                    description: "dictionary diff two"
+                    description: "to"
     dist-rtr02:
         custom:
             interfaces:
