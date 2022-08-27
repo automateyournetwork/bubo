@@ -2,6 +2,8 @@ extends: testbed.yaml
 devices:
     dist-rtr01:
         custom:
+            domain_name: "virl.info"
+            motd: "YESTERDAY WAS INTERNATIONAL DOG DAY\nPET YOUR DOG!"
             interfaces:
                 GigabitEthernet1:
                     description: "to port6.sandbox-backend"
@@ -19,6 +21,8 @@ devices:
                     description: "to"
     dist-rtr02:
         custom:
+            domain_name: "virl.info"
+            motd: "This is a MOTD Banner set from intent"        
             interfaces:
                 GigabitEthernet1:
                     description: "to port7.sandbox-backend"
@@ -36,12 +40,14 @@ devices:
                     description: "to"
     sandbox-iosxe-latest-1.cisco.com:
         custom:
+            domain_name: "lab.devnetsandbox.local"
+            motd: "\nWelcome to the DevNet Sandbox for CSR1000v and IOS XE\n \nThe following programmability features are already enabled:\n  - NETCONF\n  - RESTCONF\n \nThanks for stopping by.\n"
             interfaces:
                 GigabitEthernet1:
                     description: "MANAGEMENT INTERFACE - DON'T TOUCH ME"
                 GigabitEthernet2:
-                    description: "Configured by RESTCONF"
+                    description: "Network Interface"
                 GigabitEthernet3:
                     description: "Network Interface"
-                Loopback100:
-                    description: "Configured by RESTCONF"
+                Loopback1010:
+                    description: "Network Interface"
