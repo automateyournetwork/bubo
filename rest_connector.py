@@ -29,7 +29,7 @@ class common_setup(aetest.CommonSetup):
     @aetest.subsection
     def loop_mark(self, testbed):
         aetest.loop.mark(Test_Interfaces, device_name=testbed.devices)
-        aetest.loop.mark(Test_System, device_name=testbed.devices)
+        aetest.loop.mark(Test_Cisco_IOS_XE_Native, device_name=testbed.devices)
 # ----------------
 # Test Case #1
 # ----------------
@@ -408,47 +408,66 @@ class Test_Interfaces(aetest.Testcase):
 
         # should we pass or fail?
         if self.failed_interfaces:
-            self.failed('Some interfaces intent / actual descriptions mismatch', goto = self.update_interface_description())            
+            self.failed('Some interfaces intent / actual descriptions mismatch')            
         else:
             self.passed('All interfaces intent / actual descriptions match')
 
+    @aetest.test
     def update_interface_description(self):
-        self.pre_change_parsed_json = self.parsed_json
-        payload = json.dumps({
-                        "openconfig-interfaces:description": f"{ self.intended_desc }"
-                    })
-        update_interface_description = self.device.rest.put(f"/restconf/data/openconfig-interfaces:interfaces/interface={ self.intf['name'] }/config/description", payload=payload)
-        log.info(f"The PUT to update the interface {self.intf['name'] } description status code was { update_interface_description }")
-        log.info("Re-testing interface")        
-        self.get_post_test_yang_data()
-        self.create_post_test_files()
-        self.pre_post_diff()
-        self.get_pre_test_yang_data()
-        self.test_interface_description_matches_intent()
+        if self.failed_interfaces:
+            self.pre_change_parsed_json = self.parsed_json
+            payload = json.dumps({
+                            "openconfig-interfaces:description": f"{ self.intended_desc }"
+                        })
+            update_interface_description = self.device.rest.put(f"/restconf/data/openconfig-interfaces:interfaces/interface={ self.intf['name'] }/config/description", payload=payload)
+            log.info(f"The PUT to update the interface {self.intf['name'] } description status code was { update_interface_description }")
+            log.info("Re-testing interface")        
+        else:
+            self.skipped('No description mismatches skipping test')
 
+    @aetest.test
     def get_post_test_yang_data(self):
-        # Use the RESTCONF OpenConfig YANG Model 
-        post_parsed_openconfig_interfaces = self.device.rest.get("/restconf/data/openconfig-interfaces:interfaces")
-        # Get the JSON payload
-        self.post_parsed_json=post_parsed_openconfig_interfaces.json()
+        if self.failed_interfaces:
+            # Use the RESTCONF OpenConfig YANG Model 
+            post_parsed_openconfig_interfaces = self.device.rest.get("/restconf/data/openconfig-interfaces:interfaces")
+            # Get the JSON payload
+            self.post_parsed_json=post_parsed_openconfig_interfaces.json()
+        else:
+            self.skipped('No description mismatches skipping test')
 
+    @aetest.test
     def create_post_test_files(self):
         # Create .JSON file
-        with open(f'JSON/{self.device.alias}_OpenConfig_Interfaces_POST_TEST.json', 'w') as f:
-            f.write(json.dumps(self.post_parsed_json, indent=4, sort_keys=True))
+        if self.failed_interfaces:
+            with open(f'JSON/{self.device.alias}_OpenConfig_Interfaces_POST_TEST.json', 'w') as f:
+                f.write(json.dumps(self.post_parsed_json, indent=4, sort_keys=True))
+        else:
+            self.skipped('No description mismatches skipping test')
 
+    @aetest.test
     def pre_post_diff(self):
-        for intf in self.pre_change_parsed_json['openconfig-interfaces:interfaces']['interface']:
-                for interface in self.post_parsed_json['openconfig-interfaces:interfaces']['interface']:
-                    if intf['name'] == interface['name']:
-                        diff = Diff(intf['config'], interface['config'])
-                        diff.findDiff()
-                        log.info(diff)
+        if self.failed_interfaces:
+            for intf in self.pre_change_parsed_json['openconfig-interfaces:interfaces']['interface']:
+                    for interface in self.post_parsed_json['openconfig-interfaces:interfaces']['interface']:
+                        if intf['name'] == interface['name']:
+                            diff = Diff(intf['config'], interface['config'])
+                            diff.findDiff()
+                            log.info(diff)
+        else:
+            self.skipped('No description mismatches skipping test')
+
+    @aetest.test
+    def retest(self):
+        if self.failed_interfaces:
+            self.get_pre_test_yang_data()
+            self.test_interface_description_matches_intent()
+        else:
+            self.skipped('No description mismatches skipping test')
 
 # ----------------
 # Test Case #1
 # ----------------
-class Test_System(aetest.Testcase):
+class Test_Cisco_IOS_XE_Native(aetest.Testcase):
     """Parse all the commands"""
 
     @aetest.test
@@ -461,14 +480,14 @@ class Test_System(aetest.Testcase):
     @aetest.test
     def get_yang_data(self):
         # Use the RESTCONF OpenConfig YANG Model 
-        parsed_openconfig_interfaces = self.device.rest.get("/restconf/data/openconfig-system:system")
+        parsed_native = self.device.rest.get("/restconf/data/Cisco-IOS-XE-native:native")
         # Get the JSON payload
-        self.parsed_json=parsed_openconfig_interfaces.json()
+        self.parsed_json=parsed_native.json()
 
     @aetest.test
     def create_files(self):
         # Create .JSON file
-        with open(f'JSON/{self.device.alias}_OpenConfig_System.json', 'w') as f:
+        with open(f'JSON/{self.device.alias}_Cisco_IOS_XE_Native_PRE_TEST.json', 'w') as f:
             f.write(json.dumps(self.parsed_json, indent=4, sort_keys=True))
     
     @aetest.test
@@ -477,17 +496,29 @@ class Test_System(aetest.Testcase):
         self.failed_banner={}
         table_data = []
         table_row = []
-        if 'motd-banner' in self.parsed_json['openconfig-system:system']['state']:
-            table_row.append(self.device.alias)
-            table_row.append("Has a Banner")
-            table_row.append('Passed')
+        if 'banner' in self.parsed_json['Cisco-IOS-XE-native:native']:
+            if 'motd' in self.parsed_json['Cisco-IOS-XE-native:native']['banner']:
+                if self.parsed_json['Cisco-IOS-XE-native:native']['banner']['motd']['banner'] == self.device.custom.motd:
+                    table_row.append(self.device.alias)
+                    table_row.append("Has Correct Banner")
+                    table_row.append('Passed')
+                else:
+                    table_row.append(self.device.alias)            
+                    table_row.append("Has Incorrect Banner")          
+                    table_row.append('Failed')
+                    self.failed_banner = "Incorrect Banner"
+            else:
+                table_row.append(self.device.alias)            
+                table_row.append("No MOTD Banner")          
+                table_row.append('Failed')
+                self.failed_banner = "No MOTD Banner"
         else:
             table_row.append(self.device.alias)            
-            table_row.append("No Banner")          
+            table_row.append("No MOTD Banner")          
             table_row.append('Failed')
-            self.failed_banner = "No Banner"
+            self.failed_banner = "No Banners"
         table_data.append(table_row)
-        # display the table
+            # display the table
         log.info(tabulate(table_data,
                             headers=['Device', 'Has Banner', 'Passed/Failed'],
                             tablefmt='orgtbl'))
@@ -495,30 +526,191 @@ class Test_System(aetest.Testcase):
         if self.failed_banner:
             self.failed('Device Does Not Have A MOTD Banner')
         else:
-            self.passed('Device Has A MOTD Banner')
+            self.passed('Device Has Correct MOTD Banner')
 
     @aetest.test
-    def test_domain_name(self):
+    def update_motd_banner(self):
+        if self.failed_banner:
+            self.pre_change_parsed_json = self.parsed_json
+            payload = json.dumps({
+                                    "Cisco-IOS-XE-native:banner": f"{ self.device.custom.motd }"
+                                })
+            update_motd_banner = self.device.rest.put("/restconf/data/Cisco-IOS-XE-native:native/banner/motd/banner", payload=payload)
+            log.info(f"The PUT to update the motd banner status code was { update_motd_banner }")
+            log.info("Re-testing motd")        
+        else:
+            self.skipped('No motd mismatches skipping test')
+
+    @aetest.test
+    def get_post_test_yang_data(self):
+        if self.failed_banner:
+            # Use the RESTCONF OpenConfig YANG Model 
+            post_parsed_native = self.device.rest.get("/restconf/data/Cisco-IOS-XE-native:native")
+            # Get the JSON payload
+            self.post_parsed_json=post_parsed_native.json()
+        else:
+            self.skipped('No motd mismatches skipping test')
+
+    @aetest.test
+    def create_post_test_files(self):
+        # Create .JSON file
+        if self.failed_banner:
+            with open(f'JSON/{self.device.alias}_Cisco_IOS_XE_Native_POST_TEST.json', 'w') as f:
+                f.write(json.dumps(self.post_parsed_json, indent=4, sort_keys=True))
+        else:
+            self.skipped('No motd mismatches skipping test')
+
+    @aetest.test
+    def pre_post_diff(self):
+        if self.failed_banner:
+            if 'banner' in self.parsed_json['Cisco-IOS-XE-native:native']:
+                if 'motd' in self.parsed_json['Cisco-IOS-XE-native:native']['banner']:            
+                    pre_change = self.pre_change_parsed_json['Cisco-IOS-XE-native:native']['banner']['motd']
+                else: 
+                    pre_change = {
+                        "Cisco-IOS-XE-native:motd": {
+                            "banner": ""
+                        }
+                    }
+            else:
+                pre_change = {
+                                "Cisco-IOS-XE-native:motd": {
+                                 "banner": ""
+                            }
+                        }
+            post_change = self.post_parsed_json['Cisco-IOS-XE-native:native']['banner']['motd']
+            diff = Diff(pre_change, post_change)
+            diff.findDiff()
+            log.info(diff)
+        else:
+            self.skipped('No MOTD mismatches skipping test')
+
+    @aetest.test
+    def retest(self):
+        if self.failed_banner:
+            self.get_yang_data()
+            self.test_motd()
+        else:
+            self.skipped('No MOTD mismatches skipping test')
+
+    @aetest.test
+    def test_ip_domain_name(self):
         # Test for input discards
-        self.domain_name={}
+        self.failed_domain_name={}
         table_data = []
         table_row = []
-        if 'domain-name' in self.parsed_json['openconfig-system:system']['state']:
-            table_row.append(self.device.alias)
-            table_row.append(self.parsed_json['openconfig-system:system']['state']['domain-name'])
-            table_row.append('Passed')
+        if 'ip' in self.parsed_json['Cisco-IOS-XE-native:native']:
+            if 'domain' in self.parsed_json['Cisco-IOS-XE-native:native']['ip']:
+                if 'name' in self.parsed_json['Cisco-IOS-XE-native:native']['ip']['domain']:
+                    if self.parsed_json['Cisco-IOS-XE-native:native']['ip']['domain']['name'] == self.device.custom.domain_name:
+                        table_row.append(self.device.alias)
+                        table_row.append(self.device.custom.domain_name)
+                        table_row.append(self.parsed_json['Cisco-IOS-XE-native:native']['ip']['domain']['name'])
+                        table_row.append('Passed')
+                    else:
+                        table_row.append(self.device.alias)
+                        table_row.append(self.device.custom.domain_name)           
+                        table_row.append(self.parsed_json['Cisco-IOS-XE-native:native']['ip']['domain']['name'])          
+                        table_row.append('Failed')
+                        self.failed_domain_name = self.parsed_json['Cisco-IOS-XE-native:native']['ip']['domain']['name']
+                else:
+                    table_row.append(self.device.alias)
+                    table_row.append(self.device.custom.domain_name)
+                    table_row.append("No Domain Name Configured")
+                    table_row.append('Failed')
+                    self.failed_domain_name = "No Domain Name"
+            else:
+                table_row.append(self.device.alias)
+                table_row.append(self.device.custom.domain_name)
+                table_row.append("No Domain Name Configured")
+                table_row.append('Failed')
+                self.failed_domain_name = "No Domain Name"
         else:
-            table_row.append(self.device.alias)            
-            table_row.append("No Domain")          
+            table_row.append(self.device.alias)
+            table_row.append(self.device.custom.domain_name)
+            table_row.append("No Domain Name Configured")
             table_row.append('Failed')
-            self.domain_name = "No Domain"
+            self.failed_domain_name = "No Domain Name"
+
         table_data.append(table_row)
-        # display the table
+            # display the table
         log.info(tabulate(table_data,
-                            headers=['Device', 'Has Domain', 'Passed/Failed'],
+                            headers=['Device', 'Intent Domain Name', 'Configured Domain Name', 'Passed/Failed'],
                             tablefmt='orgtbl'))
         # should we pass or fail?
-        if self.domain_name:
+        if self.failed_domain_name:
             self.failed('Device Does Not Have A Domain Name')
         else:
-            self.passed('Device Has A Domain Name')
+            self.passed('Device Has The Correct Domain Name')
+
+    @aetest.test
+    def update_domain_name(self):
+        if self.failed_domain_name:
+            self.pre_change_parsed_json = self.parsed_json
+            payload = json.dumps({
+                                    "Cisco-IOS-XE-native:name": f"{self.device.custom.domain_name}"
+                                })
+            update_domain_name = self.device.rest.put("/restconf/data/Cisco-IOS-XE-native:native/ip/domain/name", payload=payload)
+            log.info(f"The PUT to update the domain name status code was { update_domain_name }")
+            log.info("Re-testing domain name")        
+        else:
+            self.skipped('No domain name mismatches skipping test')
+
+    @aetest.test
+    def get_post_test_yang_data(self):
+        if self.failed_domain_name:
+            # Use the RESTCONF OpenConfig YANG Model 
+            post_parsed_native = self.device.rest.get("/restconf/data/Cisco-IOS-XE-native:native")
+            # Get the JSON payload
+            self.post_parsed_json=post_parsed_native.json()
+        else:
+            self.skipped('No domain name mismatches skipping test')
+
+    @aetest.test
+    def create_post_test_files(self):
+        # Create .JSON file
+        if self.failed_domain_name:
+            with open(f'JSON/{self.device.alias}_Cisco_IOS_XE_Native_POST_TEST.json', 'w') as f:
+                f.write(json.dumps(self.post_parsed_json, indent=4, sort_keys=True))
+        else:
+            self.skipped('No domain name mismatches skipping test')
+
+    @aetest.test
+    def pre_post_diff(self):
+        if self.failed_domain_name:
+            if 'ip' in self.parsed_json['Cisco-IOS-XE-native:native']:
+                if 'domain' in self.parsed_json['Cisco-IOS-XE-native:native']['ip']:
+                    if 'name' in self.parsed_json['Cisco-IOS-XE-native:native']['ip']['domain']:           
+                        pre_change = self.pre_change_parsed_json['Cisco-IOS-XE-native:native']['ip']['domain']
+                    else: 
+                        pre_change = {
+                                "Cisco-IOS-XE-native:domain": {
+                                "name": ""
+                                }
+                            }
+                else:
+                    pre_change = {
+                            "Cisco-IOS-XE-native:domain": {
+                            "name": ""
+                            }
+                        }
+            else:
+                pre_change = {
+                        "Cisco-IOS-XE-native:domain": {
+                        "name": ""
+                        }
+                    }
+            post_change = self.post_parsed_json['Cisco-IOS-XE-native:native']['ip']['domain']
+            diff = Diff(pre_change, post_change)
+            diff.findDiff()
+            log.info(diff)
+        else:
+            self.skipped('No domain name mismatches skipping test')
+
+    @aetest.test
+    def retest(self):
+        if self.failed_domain_name:
+            self.get_yang_data()
+            self.test_ip_domain_name()
+        else:
+            self.skipped('No domain name mismatches skipping test')
