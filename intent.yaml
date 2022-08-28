@@ -19,6 +19,10 @@ devices:
                     description: "L3 Link to dist-rtr02"
                 Loopback0:
                     description: "to"
+                Loopback100:
+                    description: "Added from intent dynamically"
+                Loopback200:
+                    description: "Dynamically added description"
     dist-rtr02:
         custom:
             domain_name: "virl.info"
@@ -49,5 +53,11 @@ devices:
                     description: "Network Interface"
                 GigabitEthernet3:
                     description: "Network Interface"
+                Loopback100:
+                    description: "Created by Ansible"
                 Loopback1010:
                     description: "Network Interface"
+                Loopback5201:
+                    description: "Added with RESTCONF082022"
+                VirtualPortGroup0:
+                    description: "Virtual Port Group"                    
