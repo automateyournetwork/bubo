@@ -1,8 +1,9 @@
-# pyATS_REST_Connector_Example
+# bubo
 Example using the pyATS REST Connector with IOS-XE / NXOS OpenConfig YANG Model 
 
 ## Ready to go with the Cisco DevNet Sandbox - CML Enterprise and the Always on IOS-XE platform
-https://devnetsandbox.cisco.com/RM/Diagram/Index/bdb14197-43e0-4d1d-9c2b-216aeaae6241?diagramType=Topology
+https://devnetsandbox.cisco.com/RM/Diagram/Index/45100600-b413-4471-b28e-b014eb824555?diagramType=Topology
+
 https://devnetsandbox.cisco.com/RM/Diagram/Index/7b4d4209-a17c-4bc3-9b38-f15184e53a94?diagramType=Topology
 
 ### Enable RESTCONF
@@ -25,19 +26,19 @@ $ source /REST_Connector/bin/activate
 
 ### Clone the repository 
 ```console
-(REST_Connector) $ git clone https://github.com/automateyournetwork/pyATS_REST_Connector_Example/
-(REST_Connector) $ cd pyATS_REST_Connector_Example
+(REST_Connector) $ git clone https://github.com/automateyournetwork/bubo/
+(REST_Connector) $ cd bubo
 ```
 
 ### Install the required packages
 ```console
-(REST_Connector) ~/pyATS_REST_Connector_Example$ pip install pyats[full]
-(REST_Connector) ~/pyATS_REST_Connector_Example$ pip install tabulate
-(REST_Connector) ~/pyATS_REST_Connector_Example$ pip install rest.connector
+(REST_Connector) ~/bubo$ pip install pyats[full]
+(REST_Connector) ~/bubo$ pip install tabulate
+(REST_Connector) ~/bubo$ pip install rest.connector
 ```
 
 ## Run the code
 ```console
-(REST_Connector) ~/pyATS_REST_Connector_Example$
-(REST_Connector) ~/pyATS_REST_Connector_Example$ pyats run job rest_connector_job.py
+(REST_Connector) ~/bubo$
+(REST_Connector) ~/bubo$ pyats run job bubo.py
 ```
