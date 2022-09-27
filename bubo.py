@@ -841,3 +841,12 @@ class Test_Interfaces(aetest.Testcase):
             self.test_interface_description_matches_intent()
         else:
             self.skipped('No description mismatches skipping test')
+
+class CommonCleanup(aetest.CommonCleanup):
+    @aetest.subsection
+    def disconnect_from_devices(self, testbed):
+        testbed.disconnect()
+
+# for running as its own executable
+if __name__ == '__main__':
+    aetest.main()
