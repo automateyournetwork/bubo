@@ -412,7 +412,7 @@ class Test_Cisco_IOS_XE_Native(aetest.Testcase):
 # Test Case #2
 # ----------------
 class Test_Interfaces(aetest.Testcase):
-    """Parse all the commands"""
+    """Parse the OpenConfig YANG Model - interfaces:interfaces"""
 
     @aetest.test
     def setup(self, testbed, device_name):

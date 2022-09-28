@@ -1,47 +1,5 @@
 extends: testbed.yaml
 devices:
-    dist-rtr01:
-        custom:
-            domain_name: "virl.info"
-            motd: "YESTERDAY WAS INTERNATIONAL DOG DAY\nPET YOUR DOG!"
-            interfaces:
-                GigabitEthernet1:
-                    description: "to port6.sandbox-backend"
-                GigabitEthernet2:
-                    description: "L3 Link to core-rtr01"
-                GigabitEthernet3:
-                    description: "L3 Link to core-rtr02"
-                GigabitEthernet4:
-                    description: "L3 Link to dist-sw01"
-                GigabitEthernet5:
-                    description: "L3 Link to dist-sw02"
-                GigabitEthernet6:
-                    description: "L3 Link to dist-rtr02"
-                Loopback0:
-                    description: "to"
-                Loopback100:
-                    description: "Added from intent dynamically"
-                Loopback200:
-                    description: "Dynamically added description"
-    dist-rtr02:
-        custom:
-            domain_name: "virl.info"
-            motd: "This is a MOTD Banner set from intent"        
-            interfaces:
-                GigabitEthernet1:
-                    description: "to port7.sandbox-backend"
-                GigabitEthernet2:
-                    description: "L3 Link to core-rtr01"
-                GigabitEthernet3:
-                    description: "L3 Link to core-rtr02"
-                GigabitEthernet4:
-                    description: "L3 Link to dist-sw01"
-                GigabitEthernet5:
-                    description: "L3 Link to dist-sw02"
-                GigabitEthernet6:
-                    description: "L3 Link to dist-rtr01"
-                Loopback0:
-                    description: "to"
     sandbox-iosxe-latest-1.cisco.com:
         custom:
             domain_name: "lab.devnetsandbox.local"
