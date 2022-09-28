@@ -1,13 +1,12 @@
 # bubo
 Example using the pyATS REST Connector with IOS-XE / NXOS OpenConfig YANG Model 
 
-## Ready to go with the Cisco DevNet Sandbox - CML Enterprise and the Always on IOS-XE platform
-https://devnetsandbox.cisco.com/RM/Diagram/Index/45100600-b413-4471-b28e-b014eb824555?diagramType=Topology
+## Ready to go with the Cisco DevNet Sandbox Always on IOS-XE platform
 
 https://devnetsandbox.cisco.com/RM/Diagram/Index/7b4d4209-a17c-4bc3-9b38-f15184e53a94?diagramType=Topology
 
 ### Enable RESTCONF
-On the CML IOS-XE Devices make sure to enable RESTCONF
+Make sure to enable RESTCONF
 
 ```console
 switch> enable
