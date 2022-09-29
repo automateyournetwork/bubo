@@ -1,13 +1,13 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/automateyournetwork/bubo)
 # bubo
-Example using the pyATS REST Connector with IOS-XE / NXOS OpenConfig YANG Model 
+Example using the both the pyATS SSH CLI parsers and pyATS REST Connector with IOS-XE / NXOS OpenConfig YANG Model for test-driven development
 
-## Ready to go with the Cisco DevNet Sandbox - CML Enterprise and the Always on IOS-XE platform
-https://devnetsandbox.cisco.com/RM/Diagram/Index/45100600-b413-4471-b28e-b014eb824555?diagramType=Topology
+## Ready to go with the Cisco DevNet Sandbox Always on IOS-XE platform
 
 https://devnetsandbox.cisco.com/RM/Diagram/Index/7b4d4209-a17c-4bc3-9b38-f15184e53a94?diagramType=Topology
 
 ### Enable RESTCONF
-On the CML IOS-XE Devices make sure to enable RESTCONF
+Make sure to enable RESTCONF
 
 ```console
 switch> enable
@@ -37,8 +37,13 @@ $ source /REST_Connector/bin/activate
 (REST_Connector) ~/bubo$ pip install rest.connector
 ```
 
-## Run the code
+## Run the code - using RESTCONF
 ```console
 (REST_Connector) ~/bubo$
-(REST_Connector) ~/bubo$ pyats run job bubo.py
+(REST_Connector) ~/bubo$ pyats run job bubo_REST.py
+```
+## Run the code - using SSH
+```console
+(REST_Connector) ~/bubo$
+(REST_Connector) ~/bubo$ pyats run job bubo_SSH.py
 ```

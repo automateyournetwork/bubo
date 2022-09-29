@@ -1,0 +1,20 @@
+extends: testbed_SSH.yaml
+devices:
+    csr1000v-1:
+        custom:
+            domain_name: "lab.devnetsandbox.local"
+            interfaces:
+                GigabitEthernet1:
+                    description: "MANAGEMENT INTERFACE - DON'T TOUCH ME"
+                GigabitEthernet2:
+                    description: "Network Interface"
+                GigabitEthernet3:
+                    description: "Network Interface"
+                Loopback100:
+                    description: "Created by Ansible"
+                Loopback1010:
+                    description: "Network Interface"
+                Loopback5201:
+                    description: "Added with RESTCONF082022"
+                VirtualPortGroup0:
+                    description: "Virtual Port Group"                    

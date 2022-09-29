@@ -9,14 +9,14 @@ def main(runtime):
     if not runtime.testbed:
         # If no testbed is provided, load the default one.
         # Load default location of Testbed
-        testbedfile = os.path.join('intent.yaml')
+        testbedfile = os.path.join('intent_SSH.yaml')
         testbed = load(testbedfile)
     else:
         # Use the one provided
         testbed = runtime.testbed
 
     # Find the location of the script in relation to the job file
-    testscript = os.path.join(os.path.dirname(__file__), 'bubo.py')
+    testscript = os.path.join(os.path.dirname(__file__), 'bubo_SSH.py')
 
     # run script
     runtime.tasks.run(testscript=testscript, testbed=testbed)

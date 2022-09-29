@@ -1,0 +1,18 @@
+---
+
+devices:                       
+    sandbox-iosxe-latest-1.cisco.com:
+        alias: 'sandbox'
+        type: 'router'
+        os: 'iosxe'
+        platform: csr1000v
+        connections:
+            rest:
+                # Rest connector class
+                class: rest.connector.Rest
+                ip: sandbox-iosxe-latest-1.cisco.com
+                port: 443
+                credentials:
+                    rest:
+                        username: developer
+                        password: C1sco12345

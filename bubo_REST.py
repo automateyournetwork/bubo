@@ -60,7 +60,7 @@ class Test_Cisco_IOS_XE_Native(aetest.Testcase):
     
     @aetest.test
     def test_motd(self):
-        # Test for input discards
+        # Test for motd banner against intent
         self.failed_banner={}
         table_data = []
         table_row = []
@@ -412,7 +412,7 @@ class Test_Cisco_IOS_XE_Native(aetest.Testcase):
 # Test Case #2
 # ----------------
 class Test_Interfaces(aetest.Testcase):
-    """Parse all the commands"""
+    """Parse the OpenConfig YANG Model - interfaces:interfaces"""
 
     @aetest.test
     def setup(self, testbed, device_name):
