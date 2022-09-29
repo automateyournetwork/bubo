@@ -1,9 +1,8 @@
-extends: testbed.yaml
+extends: testbed_SSH.yaml
 devices:
-    sandbox-iosxe-latest-1.cisco.com:
+    csr1000v-1:
         custom:
             domain_name: "lab.devnetsandbox.local"
-            motd: "\nWelcome to the DevNet Sandbox for CSR1000v and IOS XE\n \nThe following programmability features are already enabled:\n  - NETCONF\n  - RESTCONF\n \nThanks for stopping by.\n"
             interfaces:
                 GigabitEthernet1:
                     description: "MANAGEMENT INTERFACE - DON'T TOUCH ME"

@@ -1,5 +1,6 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/automateyournetwork/bubo)
 # bubo
-Example using the pyATS REST Connector with IOS-XE / NXOS OpenConfig YANG Model 
+Example using the both the pyATS SSH CLI parsers and pyATS REST Connector with IOS-XE / NXOS OpenConfig YANG Model for test-driven development
 
 ## Ready to go with the Cisco DevNet Sandbox Always on IOS-XE platform
 
@@ -36,8 +37,13 @@ $ source /REST_Connector/bin/activate
 (REST_Connector) ~/bubo$ pip install rest.connector
 ```
 
-## Run the code
+## Run the code - using RESTCONF
 ```console
 (REST_Connector) ~/bubo$
-(REST_Connector) ~/bubo$ pyats run job bubo.py
+(REST_Connector) ~/bubo$ pyats run job bubo_REST.py
+```
+## Run the code - using SSH
+```console
+(REST_Connector) ~/bubo$
+(REST_Connector) ~/bubo$ pyats run job bubo_SSH.py
 ```

@@ -60,7 +60,7 @@ class Test_Cisco_IOS_XE_Native(aetest.Testcase):
     
     @aetest.test
     def test_motd(self):
-        # Test for input discards
+        # Test for motd banner against intent
         self.failed_banner={}
         table_data = []
         table_row = []
