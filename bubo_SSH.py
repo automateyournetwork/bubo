@@ -269,25 +269,28 @@ class Test_Interfaces(aetest.Testcase):
         self.failed_interfaces = {}
         table_data = []
         for intf,value in self.parsed_interfaces.info.items():
-            counter = value['counters']['in_errors']
-            table_row = []
-            table_row.append(self.device.alias)
-            table_row.append(intf)
-            table_row.append(counter)
-            if int(counter) > in_errors_threshold:
-                table_row.append('Failed')
-                self.failed_interfaces[intf] = int(counter)
-                self.interface_name = intf
-                self.error_counter = self.failed_interfaces[intf]
-            else:
-                table_row.append('Passed')
-            table_data.append(table_row)
-            # display the table
+            if 'counters' in value:
+                counter = value['counters']['in_errors']
+                table_row = []
+                table_row.append(self.device.alias)
+                table_row.append(intf)
+                table_row.append(counter)
+                if int(counter) > in_errors_threshold:
+                    table_row.append('Failed')
+                    self.failed_interfaces[intf] = int(counter)
+                    self.interface_name = intf
+                    self.error_counter = self.failed_interfaces[intf]
+                else:
+                    table_row.append('Passed')
+                table_data.append(table_row)
+        
+        # display the table
         log.info(tabulate(table_data,
-                            headers=['Device', 'Interface',
-                                    'Input Errors Counter',
-                                    'Passed/Failed'],
-                            tablefmt='orgtbl'))
+            headers=['Device', 'Interface',
+                    'Input Errors Counter',
+                    'Passed/Failed'],
+                    tablefmt='orgtbl'))
+
         # should we pass or fail?
         if self.failed_interfaces:
             self.failed('Some interfaces have input errors')
@@ -301,19 +304,20 @@ class Test_Interfaces(aetest.Testcase):
         self.failed_interfaces = {}
         table_data = []
         for intf,value in self.parsed_interfaces.info.items():
-            counter = value['counters']['in_crc_errors']
-            table_row = []
-            table_row.append(self.device.alias)
-            table_row.append(intf)
-            table_row.append(counter)
-            if int(counter) > in_errors_threshold:
-                table_row.append('Failed')
-                self.failed_interfaces[intf] = int(counter)
-                self.interface_name = intf
-                self.error_counter = self.failed_interfaces[intf]
-            else:
-                table_row.append('Passed')
-            table_data.append(table_row)
+            if 'counters' in value:
+                counter = value['counters']['in_crc_errors']
+                table_row = []
+                table_row.append(self.device.alias)
+                table_row.append(intf)
+                table_row.append(counter)
+                if int(counter) > in_errors_threshold:
+                    table_row.append('Failed')
+                    self.failed_interfaces[intf] = int(counter)
+                    self.interface_name = intf
+                    self.error_counter = self.failed_interfaces[intf]
+                else:
+                    table_row.append('Passed')
+                table_data.append(table_row)
             # display the table
         log.info(tabulate(table_data,
                             headers=['Device', 'Interface',
@@ -333,19 +337,20 @@ class Test_Interfaces(aetest.Testcase):
         self.failed_interfaces = {}
         table_data = []
         for intf,value in self.parsed_interfaces.info.items():
-            counter = value['counters']['out_errors']
-            table_row = []
-            table_row.append(self.device.alias)
-            table_row.append(intf)
-            table_row.append(counter)
-            if int(counter) > in_errors_threshold:
-                table_row.append('Failed')
-                self.failed_interfaces[intf] = int(counter)
-                self.interface_name = intf
-                self.error_counter = self.failed_interfaces[intf]
-            else:
-                table_row.append('Passed')
-            table_data.append(table_row)
+            if 'counters' in value:
+                counter = value['counters']['out_errors']
+                table_row = []
+                table_row.append(self.device.alias)
+                table_row.append(intf)
+                table_row.append(counter)
+                if int(counter) > in_errors_threshold:
+                    table_row.append('Failed')
+                    self.failed_interfaces[intf] = int(counter)
+                    self.interface_name = intf
+                    self.error_counter = self.failed_interfaces[intf]
+                else:
+                    table_row.append('Passed')
+                table_data.append(table_row)
             # display the table
         log.info(tabulate(table_data,
                             headers=['Device', 'Interface',
