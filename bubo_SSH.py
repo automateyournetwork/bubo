@@ -486,7 +486,6 @@ class Test_Interfaces(aetest.Testcase):
 
     def update_interface_description(self):
         if self.failed_interfaces:
-            self.pre_change_parsed_json = self.parsed_interfaces
             self.device.configure(f'''interface { self.intf }
                                       description { self.intended_desc } 
                                     ''')
@@ -496,8 +495,10 @@ class Test_Interfaces(aetest.Testcase):
     @aetest.test
     def get_post_test_interface_data(self):
         if self.failed_interfaces:
+            self.pre_change_parsed_json = self.parsed_interfaces
             self.post_parsed_interfaces = self.device.learn("interface")
         else:
+            self.pre_change_parsed_json = self.parsed_interfaces
             self.skipped('No description mismatches skipping test')
 
     @aetest.test
