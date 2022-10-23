@@ -1,7 +1,7 @@
 ---
 
 devices:                       
-    sandbox-iosxe-latest-1.cisco.com:
+    csr1000v-1:
         alias: 'sandbox'
         type: 'router'
         os: 'iosxe'
@@ -16,3 +16,28 @@ devices:
                     rest:
                         username: developer
                         password: C1sco12345
+
+topology:
+    csr1000v-1:
+      interfaces:
+          GigabitEthernet1:
+              type: ethernet
+              description: "MANAGEMENT INTERFACE - DON'T TOUCH ME"
+          GigabitEthernet2:
+              type: ethernet
+              description: "Network Interface"
+          GigabitEthernet3:
+              type: ethernet
+              description: "Network Interface"
+          Loopback100:
+              type: ethernet
+              description: "Created by Ansible"
+          Loopback1010:
+              type: ethernet
+              description: "Network Interface"
+          Loopback5201:
+              type: ethernet
+              description: "Added with RESTCONF082022"
+          VirtualPortGroup0:
+              type: ethernet
+              description: "Virtual Port Group"

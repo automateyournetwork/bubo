@@ -1,0 +1,2806 @@
+{
+    "openconfig-interfaces:interfaces": {
+        "interface": [
+            {
+                "config": {
+                    "description": "MANAGEMENT INTERFACE - DON'T TOUCH ME",
+                    "enabled": true,
+                    "name": "GigabitEthernet1",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "name": "GigabitEthernet1",
+                "openconfig-if-ethernet:ethernet": {
+                    "config": {
+                        "auto-negotiate": true,
+                        "enable-flow-control": true,
+                        "mac-address": "00:50:56:bf:78:ac"
+                    },
+                    "state": {
+                        "auto-negotiate": true,
+                        "counters": {
+                            "in-8021q-frames": "0",
+                            "in-crc-errors": "0",
+                            "in-fragment-frames": "0",
+                            "in-jabber-frames": "0",
+                            "in-mac-control-frames": "0",
+                            "in-mac-pause-frames": "0",
+                            "in-oversize-frames": "0",
+                            "out-8021q-frames": "0",
+                            "out-mac-control-frames": "0",
+                            "out-mac-pause-frames": "0"
+                        },
+                        "enable-flow-control": false,
+                        "hw-mac-address": "00:50:56:bf:78:ac",
+                        "mac-address": "00:50:56:bf:78:ac",
+                        "negotiated-duplex-mode": "FULL",
+                        "negotiated-port-speed": "openconfig-if-ethernet:SPEED_1GB",
+                        "port-speed": "openconfig-if-ethernet:SPEED_1GB"
+                    }
+                },
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "963550",
+                        "in-unicast-pkts": "9805",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "2681464",
+                        "out-unicast-pkts": "11792"
+                    },
+                    "description": "MANAGEMENT INTERFACE - DON'T TOUCH ME",
+                    "enabled": true,
+                    "ifindex": 1,
+                    "last-change": "1666529370982000000",
+                    "name": "GigabitEthernet1",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "description": "MANAGEMENT INTERFACE - DON'T TOUCH ME",
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.20.48",
+                                                "prefix-length": 24
+                                            },
+                                            "ip": "10.10.20.48",
+                                            "state": {
+                                                "ip": "10.10.20.48",
+                                                "prefix-length": 24
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "959450",
+                                        "in-pkts": "9772",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "11761",
+                                        "out-octets": "2674165",
+                                        "out-pkts": "11763"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "963550",
+                                    "in-unicast-pkts": "9805",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529245000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "2681464",
+                                    "out-unicast-pkts": "11792"
+                                },
+                                "description": "MANAGEMENT INTERFACE - DON'T TOUCH ME",
+                                "enabled": true,
+                                "ifindex": 1,
+                                "last-change": "1666529370982000000",
+                                "name": "GigabitEthernet1",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "description": "Network Interface",
+                    "enabled": false,
+                    "name": "GigabitEthernet2",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "name": "GigabitEthernet2",
+                "openconfig-if-ethernet:ethernet": {
+                    "config": {
+                        "auto-negotiate": true,
+                        "enable-flow-control": true,
+                        "mac-address": "00:50:56:bf:4e:a3"
+                    },
+                    "state": {
+                        "auto-negotiate": true,
+                        "counters": {
+                            "in-8021q-frames": "0",
+                            "in-crc-errors": "0",
+                            "in-fragment-frames": "0",
+                            "in-jabber-frames": "0",
+                            "in-mac-control-frames": "0",
+                            "in-mac-pause-frames": "0",
+                            "in-oversize-frames": "0",
+                            "out-8021q-frames": "0",
+                            "out-mac-control-frames": "0",
+                            "out-mac-pause-frames": "0"
+                        },
+                        "enable-flow-control": false,
+                        "hw-mac-address": "00:50:56:bf:4e:a3",
+                        "mac-address": "00:50:56:bf:4e:a3",
+                        "negotiated-duplex-mode": "FULL",
+                        "negotiated-port-speed": "openconfig-if-ethernet:SPEED_1GB",
+                        "port-speed": "openconfig-if-ethernet:SPEED_1GB"
+                    }
+                },
+                "state": {
+                    "admin-status": "DOWN",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "300",
+                        "in-unicast-pkts": "5",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "description": "Network Interface",
+                    "enabled": false,
+                    "ifindex": 2,
+                    "last-change": "1666529366689000000",
+                    "name": "GigabitEthernet2",
+                    "oper-status": "DOWN",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "description": "Network Interface",
+                                "enabled": false,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "DOWN",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "300",
+                                    "in-unicast-pkts": "5",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529245000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "description": "Network Interface",
+                                "enabled": false,
+                                "ifindex": 2,
+                                "last-change": "1666529366689000000",
+                                "name": "GigabitEthernet2",
+                                "oper-status": "DOWN"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "description": "Network Interface",
+                    "enabled": false,
+                    "name": "GigabitEthernet3",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "name": "GigabitEthernet3",
+                "openconfig-if-ethernet:ethernet": {
+                    "config": {
+                        "auto-negotiate": true,
+                        "enable-flow-control": true,
+                        "mac-address": "00:50:56:bf:7d:b4"
+                    },
+                    "state": {
+                        "auto-negotiate": true,
+                        "counters": {
+                            "in-8021q-frames": "0",
+                            "in-crc-errors": "0",
+                            "in-fragment-frames": "0",
+                            "in-jabber-frames": "0",
+                            "in-mac-control-frames": "0",
+                            "in-mac-pause-frames": "0",
+                            "in-oversize-frames": "0",
+                            "out-8021q-frames": "0",
+                            "out-mac-control-frames": "0",
+                            "out-mac-pause-frames": "0"
+                        },
+                        "enable-flow-control": false,
+                        "hw-mac-address": "00:50:56:bf:7d:b4",
+                        "mac-address": "00:50:56:bf:7d:b4",
+                        "negotiated-duplex-mode": "FULL",
+                        "negotiated-port-speed": "openconfig-if-ethernet:SPEED_1GB",
+                        "port-speed": "openconfig-if-ethernet:SPEED_1GB"
+                    }
+                },
+                "state": {
+                    "admin-status": "DOWN",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "description": "Network Interface",
+                    "enabled": false,
+                    "ifindex": 3,
+                    "last-change": "1666529366698000000",
+                    "name": "GigabitEthernet3",
+                    "oper-status": "DOWN",
+                    "type": "iana-if-type:ethernetCsmacd"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "description": "Network Interface",
+                                "enabled": false,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "DOWN",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529245000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "description": "Network Interface",
+                                "enabled": false,
+                                "ifindex": 3,
+                                "last-change": "1666529366698000000",
+                                "name": "GigabitEthernet3",
+                                "oper-status": "DOWN"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback100",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback100",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529246000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 22,
+                    "last-change": "1666533168986000000",
+                    "name": "Loopback100",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529246000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 22,
+                                "last-change": "1666533168986000000",
+                                "name": "Loopback100",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback101",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback101",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529246000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 7,
+                    "last-change": "1666531328113000000",
+                    "name": "Loopback101",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.21",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.21",
+                                            "state": {
+                                                "ip": "10.10.10.21",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529246000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 7,
+                                "last-change": "1666531328113000000",
+                                "name": "Loopback101",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback102",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback102",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529246000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 8,
+                    "last-change": "1666531430150000000",
+                    "name": "Loopback102",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.22",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.22",
+                                            "state": {
+                                                "ip": "10.10.10.22",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529246000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 8,
+                                "last-change": "1666531430150000000",
+                                "name": "Loopback102",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback103",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback103",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 9,
+                    "last-change": "1666531431716000000",
+                    "name": "Loopback103",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.23",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.23",
+                                            "state": {
+                                                "ip": "10.10.10.23",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529245000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 9,
+                                "last-change": "1666531431716000000",
+                                "name": "Loopback103",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback104",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback104",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 10,
+                    "last-change": "1666531435325000000",
+                    "name": "Loopback104",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.24",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.24",
+                                            "state": {
+                                                "ip": "10.10.10.24",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529245000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 10,
+                                "last-change": "1666531435325000000",
+                                "name": "Loopback104",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback105",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback105",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 11,
+                    "last-change": "1666531439133000000",
+                    "name": "Loopback105",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.25",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.25",
+                                            "state": {
+                                                "ip": "10.10.10.25",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529245000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 11,
+                                "last-change": "1666531439133000000",
+                                "name": "Loopback105",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback106",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback106",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 12,
+                    "last-change": "1666531441442000000",
+                    "name": "Loopback106",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.26",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.26",
+                                            "state": {
+                                                "ip": "10.10.10.26",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529245000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 12,
+                                "last-change": "1666531441442000000",
+                                "name": "Loopback106",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback107",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback107",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 13,
+                    "last-change": "1666531443865000000",
+                    "name": "Loopback107",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.27",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.27",
+                                            "state": {
+                                                "ip": "10.10.10.27",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529245000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 13,
+                                "last-change": "1666531443865000000",
+                                "name": "Loopback107",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback108",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback108",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 14,
+                    "last-change": "1666531446272000000",
+                    "name": "Loopback108",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.28",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.28",
+                                            "state": {
+                                                "ip": "10.10.10.28",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529245000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 14,
+                                "last-change": "1666531446272000000",
+                                "name": "Loopback108",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback109",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback109",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 15,
+                    "last-change": "1666531449554000000",
+                    "name": "Loopback109",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.29",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.29",
+                                            "state": {
+                                                "ip": "10.10.10.29",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529245000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 15,
+                                "last-change": "1666531449554000000",
+                                "name": "Loopback109",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback111",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback111",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529246000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 6,
+                    "last-change": "1666530858652000000",
+                    "name": "Loopback111",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.1",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.1",
+                                            "state": {
+                                                "ip": "10.10.10.1",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529246000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 6,
+                                "last-change": "1666530858652000000",
+                                "name": "Loopback111",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback1010",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback1010",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529246000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 16,
+                    "last-change": "1666531454439000000",
+                    "name": "Loopback1010",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.210",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.210",
+                                            "state": {
+                                                "ip": "10.10.10.210",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529246000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 16,
+                                "last-change": "1666531454439000000",
+                                "name": "Loopback1010",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback1011",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback1011",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529246000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 17,
+                    "last-change": "1666531457016000000",
+                    "name": "Loopback1011",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.211",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.211",
+                                            "state": {
+                                                "ip": "10.10.10.211",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529246000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 17,
+                                "last-change": "1666531457016000000",
+                                "name": "Loopback1011",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback1012",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback1012",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 18,
+                    "last-change": "1666531459909000000",
+                    "name": "Loopback1012",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.212",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.212",
+                                            "state": {
+                                                "ip": "10.10.10.212",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529245000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 18,
+                                "last-change": "1666531459909000000",
+                                "name": "Loopback1012",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback1013",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback1013",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 19,
+                    "last-change": "1666531463740000000",
+                    "name": "Loopback1013",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.213",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.213",
+                                            "state": {
+                                                "ip": "10.10.10.213",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529245000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 19,
+                                "last-change": "1666531463740000000",
+                                "name": "Loopback1013",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback1014",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback1014",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 20,
+                    "last-change": "1666531467612000000",
+                    "name": "Loopback1014",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.214",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.214",
+                                            "state": {
+                                                "ip": "10.10.10.214",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529245000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 20,
+                                "last-change": "1666531467612000000",
+                                "name": "Loopback1014",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback1015",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback1015",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 21,
+                    "last-change": "1666531469972000000",
+                    "name": "Loopback1015",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "addresses": {
+                                    "address": [
+                                        {
+                                            "config": {
+                                                "ip": "10.10.10.215",
+                                                "prefix-length": 32
+                                            },
+                                            "ip": "10.10.10.215",
+                                            "state": {
+                                                "ip": "10.10.10.215",
+                                                "prefix-length": 32
+                                            }
+                                        }
+                                    ]
+                                },
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529245000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 21,
+                                "last-change": "1666531469972000000",
+                                "name": "Loopback1015",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "Loopback5201",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "name": "Loopback5201",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 23,
+                    "last-change": "1666533168659000000",
+                    "name": "Loopback5201",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:softwareLoopback"
+                },
+                "subinterfaces": {
+                    "subinterface": [
+                        {
+                            "config": {
+                                "enabled": true,
+                                "index": 0
+                            },
+                            "index": 0,
+                            "openconfig-if-ip:ipv4": {
+                                "proxy-arp": {
+                                    "state": {
+                                        "mode": "DISABLE"
+                                    }
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    }
+                                }
+                            },
+                            "openconfig-if-ip:ipv6": {
+                                "config": {
+                                    "enabled": false
+                                },
+                                "state": {
+                                    "counters": {
+                                        "in-discarded-pkts": "0",
+                                        "in-error-pkts": "0",
+                                        "in-forwarded-octets": "0",
+                                        "in-forwarded-pkts": "0",
+                                        "in-octets": "0",
+                                        "in-pkts": "0",
+                                        "out-discarded-pkts": "0",
+                                        "out-error-pkts": "0",
+                                        "out-forwarded-octets": "0",
+                                        "out-forwarded-pkts": "0",
+                                        "out-octets": "0",
+                                        "out-pkts": "0"
+                                    },
+                                    "enabled": false
+                                }
+                            },
+                            "state": {
+                                "admin-status": "UP",
+                                "counters": {
+                                    "in-broadcast-pkts": "0",
+                                    "in-discards": "0",
+                                    "in-errors": "0",
+                                    "in-fcs-errors": "0",
+                                    "in-multicast-pkts": "0",
+                                    "in-octets": "0",
+                                    "in-unicast-pkts": "0",
+                                    "in-unknown-protos": "0",
+                                    "last-clear": "1666529245000000000",
+                                    "out-broadcast-pkts": "0",
+                                    "out-discards": "0",
+                                    "out-errors": "0",
+                                    "out-multicast-pkts": "0",
+                                    "out-octets": "0",
+                                    "out-unicast-pkts": "0"
+                                },
+                                "enabled": true,
+                                "ifindex": 23,
+                                "last-change": "1666533168659000000",
+                                "name": "Loopback5201",
+                                "oper-status": "UP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "config": {
+                    "enabled": true,
+                    "name": "VirtualPortGroup0",
+                    "type": "iana-if-type:propVirtual"
+                },
+                "name": "VirtualPortGroup0",
+                "state": {
+                    "admin-status": "UP",
+                    "counters": {
+                        "in-broadcast-pkts": "0",
+                        "in-discards": "0",
+                        "in-errors": "0",
+                        "in-fcs-errors": "0",
+                        "in-multicast-pkts": "0",
+                        "in-octets": "0",
+                        "in-unicast-pkts": "0",
+                        "in-unknown-protos": "0",
+                        "last-clear": "1666529245000000000",
+                        "out-broadcast-pkts": "0",
+                        "out-discards": "0",
+                        "out-errors": "0",
+                        "out-multicast-pkts": "0",
+                        "out-octets": "0",
+                        "out-unicast-pkts": "0"
+                    },
+                    "enabled": true,
+                    "ifindex": 24,
+                    "last-change": "1666533172331000000",
+                    "name": "VirtualPortGroup0",
+                    "oper-status": "UP",
+                    "type": "iana-if-type:propVirtual"
+                }
+            }
+        ]
+    }
+}

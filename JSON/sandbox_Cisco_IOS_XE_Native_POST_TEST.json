@@ -1,0 +1,730 @@
+{
+    "Cisco-IOS-XE-native:native": {
+        "Cisco-IOS-XE-diagnostics:diagnostic": {
+            "bootup": {
+                "level": "minimal"
+            }
+        },
+        "banner": {
+            "motd": {
+                "banner": "\nWelcome to the DevNet Sandbox for CSR1000v and IOS XE\n \nThe following programmability features are already enabled:\n  - NETCONF\n  - RESTCONF\n \nThanks for stopping by.\n"
+            }
+        },
+        "boot-end-marker": [
+            null
+        ],
+        "boot-start-marker": [
+            null
+        ],
+        "call-home": {
+            "Cisco-IOS-XE-call-home:contact-email-addr": "sch-smart-licensing@cisco.com",
+            "Cisco-IOS-XE-call-home:tac-profile": {
+                "profile": {
+                    "CiscoTAC-1": {
+                        "active": true,
+                        "destination": {
+                            "transport-method": "http"
+                        }
+                    }
+                }
+            }
+        },
+        "control-plane": {},
+        "crypto": {
+            "Cisco-IOS-XE-crypto:pki": {
+                "certificate": {
+                    "chain": [
+                        {
+                            "certificate": [
+                                {
+                                    "certtype": "ca",
+                                    "serial": "01"
+                                }
+                            ],
+                            "name": "SLA-TrustPoint"
+                        },
+                        {
+                            "certificate": [
+                                {
+                                    "certtype": "self-signed",
+                                    "serial": "01"
+                                }
+                            ],
+                            "name": "TP-self-signed-807034967"
+                        }
+                    ]
+                },
+                "trustpoint": [
+                    {
+                        "enrollment": {
+                            "pkcs12": [
+                                null
+                            ]
+                        },
+                        "id": "SLA-TrustPoint",
+                        "revocation-check": [
+                            "crl"
+                        ]
+                    },
+                    {
+                        "enrollment": {
+                            "selfsigned": [
+                                null
+                            ]
+                        },
+                        "id": "TP-self-signed-807034967",
+                        "revocation-check": [
+                            "none"
+                        ],
+                        "subject-name": "cn=IOS-Self-Signed-Certificate-807034967"
+                    }
+                ]
+            }
+        },
+        "enable": {
+            "secret": {
+                "secret": "$9$GNcSrWbM1PyCqU$9.BCza34ClqbgyABGzRV1v5hjCWhaoN9K.gqxCtcCvE",
+                "type": "9"
+            }
+        },
+        "hostname": "csr1000v-1",
+        "interface": {
+            "GigabitEthernet": [
+                {
+                    "Cisco-IOS-XE-ethernet:negotiation": {
+                        "auto": true
+                    },
+                    "description": "MANAGEMENT INTERFACE - DON'T TOUCH ME",
+                    "ip": {
+                        "address": {
+                            "primary": {
+                                "address": "10.10.20.48",
+                                "mask": "255.255.255.0"
+                            }
+                        }
+                    },
+                    "mop": {
+                        "enabled": false,
+                        "sysid": false
+                    },
+                    "name": "1"
+                },
+                {
+                    "Cisco-IOS-XE-ethernet:negotiation": {
+                        "auto": true
+                    },
+                    "description": "Network Interface",
+                    "mop": {
+                        "enabled": false,
+                        "sysid": false
+                    },
+                    "name": "2",
+                    "shutdown": [
+                        null
+                    ]
+                },
+                {
+                    "Cisco-IOS-XE-ethernet:negotiation": {
+                        "auto": true
+                    },
+                    "description": "Network Interface",
+                    "mop": {
+                        "enabled": false,
+                        "sysid": false
+                    },
+                    "name": "3",
+                    "shutdown": [
+                        null
+                    ]
+                }
+            ],
+            "Loopback": [
+                {
+                    "name": 100
+                },
+                {
+                    "ip": {
+                        "Cisco-IOS-XE-ospf:router-ospf": {
+                            "ospf": {
+                                "process-id": [
+                                    {
+                                        "area": [
+                                            {
+                                                "area-id": 0
+                                            }
+                                        ],
+                                        "id": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.21",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 101
+                },
+                {
+                    "ip": {
+                        "Cisco-IOS-XE-ospf:router-ospf": {
+                            "ospf": {
+                                "process-id": [
+                                    {
+                                        "area": [
+                                            {
+                                                "area-id": 0
+                                            }
+                                        ],
+                                        "id": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.22",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 102
+                },
+                {
+                    "ip": {
+                        "Cisco-IOS-XE-ospf:router-ospf": {
+                            "ospf": {
+                                "process-id": [
+                                    {
+                                        "area": [
+                                            {
+                                                "area-id": 0
+                                            }
+                                        ],
+                                        "id": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.23",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 103
+                },
+                {
+                    "ip": {
+                        "Cisco-IOS-XE-ospf:router-ospf": {
+                            "ospf": {
+                                "process-id": [
+                                    {
+                                        "area": [
+                                            {
+                                                "area-id": 0
+                                            }
+                                        ],
+                                        "id": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.24",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 104
+                },
+                {
+                    "ip": {
+                        "Cisco-IOS-XE-ospf:router-ospf": {
+                            "ospf": {
+                                "process-id": [
+                                    {
+                                        "area": [
+                                            {
+                                                "area-id": 0
+                                            }
+                                        ],
+                                        "id": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.25",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 105
+                },
+                {
+                    "ip": {
+                        "Cisco-IOS-XE-ospf:router-ospf": {
+                            "ospf": {
+                                "process-id": [
+                                    {
+                                        "area": [
+                                            {
+                                                "area-id": 0
+                                            }
+                                        ],
+                                        "id": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.26",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 106
+                },
+                {
+                    "ip": {
+                        "Cisco-IOS-XE-ospf:router-ospf": {
+                            "ospf": {
+                                "process-id": [
+                                    {
+                                        "area": [
+                                            {
+                                                "area-id": 0
+                                            }
+                                        ],
+                                        "id": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.27",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 107
+                },
+                {
+                    "ip": {
+                        "Cisco-IOS-XE-ospf:router-ospf": {
+                            "ospf": {
+                                "process-id": [
+                                    {
+                                        "area": [
+                                            {
+                                                "area-id": 0
+                                            }
+                                        ],
+                                        "id": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.28",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 108
+                },
+                {
+                    "ip": {
+                        "Cisco-IOS-XE-ospf:router-ospf": {
+                            "ospf": {
+                                "process-id": [
+                                    {
+                                        "area": [
+                                            {
+                                                "area-id": 0
+                                            }
+                                        ],
+                                        "id": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.29",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 109
+                },
+                {
+                    "ip": {
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.1",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 111
+                },
+                {
+                    "ip": {
+                        "Cisco-IOS-XE-ospf:router-ospf": {
+                            "ospf": {
+                                "process-id": [
+                                    {
+                                        "area": [
+                                            {
+                                                "area-id": 0
+                                            }
+                                        ],
+                                        "id": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.210",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 1010
+                },
+                {
+                    "ip": {
+                        "Cisco-IOS-XE-ospf:router-ospf": {
+                            "ospf": {
+                                "process-id": [
+                                    {
+                                        "area": [
+                                            {
+                                                "area-id": 0
+                                            }
+                                        ],
+                                        "id": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.211",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 1011
+                },
+                {
+                    "ip": {
+                        "Cisco-IOS-XE-ospf:router-ospf": {
+                            "ospf": {
+                                "process-id": [
+                                    {
+                                        "area": [
+                                            {
+                                                "area-id": 0
+                                            }
+                                        ],
+                                        "id": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.212",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 1012
+                },
+                {
+                    "ip": {
+                        "Cisco-IOS-XE-ospf:router-ospf": {
+                            "ospf": {
+                                "process-id": [
+                                    {
+                                        "area": [
+                                            {
+                                                "area-id": 0
+                                            }
+                                        ],
+                                        "id": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.213",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 1013
+                },
+                {
+                    "ip": {
+                        "Cisco-IOS-XE-ospf:router-ospf": {
+                            "ospf": {
+                                "process-id": [
+                                    {
+                                        "area": [
+                                            {
+                                                "area-id": 0
+                                            }
+                                        ],
+                                        "id": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.214",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 1014
+                },
+                {
+                    "ip": {
+                        "Cisco-IOS-XE-ospf:router-ospf": {
+                            "ospf": {
+                                "process-id": [
+                                    {
+                                        "area": [
+                                            {
+                                                "area-id": 0
+                                            }
+                                        ],
+                                        "id": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "address": {
+                            "primary": {
+                                "address": "10.10.10.215",
+                                "mask": "255.255.255.255"
+                            }
+                        }
+                    },
+                    "name": 1015
+                },
+                {
+                    "name": 5201
+                }
+            ],
+            "VirtualPortGroup": [
+                {
+                    "name": 0
+                }
+            ]
+        },
+        "ip": {
+            "Cisco-IOS-XE-http:http": {
+                "authentication": {
+                    "local": [
+                        null
+                    ]
+                },
+                "secure-server": true,
+                "server": true
+            },
+            "domain": {
+                "name": "lab.devnetsandbox.local"
+            },
+            "forward-protocol": {
+                "protocol": "nd"
+            },
+            "route": {
+                "ip-route-interface-forwarding-list": [
+                    {
+                        "fwd-list": [
+                            {
+                                "fwd": "GigabitEthernet1",
+                                "interface-next-hop": [
+                                    {
+                                        "ip-address": "10.10.20.254"
+                                    }
+                                ]
+                            }
+                        ],
+                        "mask": "0.0.0.0",
+                        "prefix": "0.0.0.0"
+                    }
+                ]
+            },
+            "scp": {
+                "server": {
+                    "enable": [
+                        null
+                    ]
+                }
+            },
+            "ssh": {
+                "rsa": {
+                    "keypair-name": "ssh-key"
+                },
+                "version": 2
+            }
+        },
+        "license": {
+            "boot": {
+                "level": {
+                    "ax": [
+                        null
+                    ]
+                }
+            },
+            "udi": {
+                "pid": "CSR1000V",
+                "sn": "9ESGOBARV9D"
+            }
+        },
+        "line": {
+            "console": [
+                {
+                    "exec-timeout": {
+                        "minutes": 0,
+                        "seconds": 0
+                    },
+                    "first": "0",
+                    "stopbits": "1"
+                }
+            ],
+            "vty": [
+                {
+                    "first": 0,
+                    "last": 4,
+                    "login": {
+                        "local": [
+                            null
+                        ]
+                    },
+                    "transport": {
+                        "input": {
+                            "input": [
+                                "ssh"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "logging": {
+            "console-config": {
+                "console": false
+            }
+        },
+        "login": {
+            "on-success": {
+                "log": {}
+            }
+        },
+        "memory": {
+            "free": {
+                "low-watermark": {
+                    "processor": 71556
+                }
+            }
+        },
+        "multilink": {
+            "Cisco-IOS-XE-ppp:bundle-name": "authenticated"
+        },
+        "platform": {
+            "Cisco-IOS-XE-platform:console": {
+                "output": "virtual"
+            },
+            "Cisco-IOS-XE-platform:punt-keepalive": {
+                "disable-kernel-core": true
+            },
+            "Cisco-IOS-XE-platform:qfp": {
+                "utilization": {
+                    "monitor": {
+                        "load": 80
+                    }
+                }
+            }
+        },
+        "redundancy": {},
+        "router": {
+            "Cisco-IOS-XE-ospf:router-ospf": {
+                "ospf": {
+                    "process-id": [
+                        {
+                            "id": 1
+                        }
+                    ]
+                }
+            }
+        },
+        "service": {
+            "call-home": [
+                null
+            ],
+            "timestamps": {
+                "debug": {
+                    "datetime": {
+                        "msec": {}
+                    }
+                },
+                "log": {
+                    "datetime": {
+                        "msec": [
+                            null
+                        ]
+                    }
+                }
+            }
+        },
+        "spanning-tree": {
+            "Cisco-IOS-XE-spanning-tree:extend": {
+                "system-id": [
+                    null
+                ]
+            }
+        },
+        "subscriber": {
+            "templating": [
+                null
+            ]
+        },
+        "username": [
+            {
+                "name": "developer",
+                "privilege": 15,
+                "secret": {
+                    "encryption": "9",
+                    "secret": "$9$oNguEA9um9vRx.$MsDk0DOy1rzBjKAcySWdNjoKcA7GetG9YNnKOs8S67A"
+                }
+            },
+            {
+                "name": "root",
+                "privilege": 15,
+                "secret": {
+                    "encryption": "9",
+                    "secret": "$9$IRHgr7MCAEFNLk$ZfOrXoRLFhh6gHIxhLPfOC9KzjIWISv4KqkNAR51kmI"
+                }
+            }
+        ],
+        "version": "17.3"
+    }
+}
