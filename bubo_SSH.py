@@ -141,7 +141,7 @@ class Test_Cisco_IOS_XE_Intent(aetest.Testcase):
         for actual_interface in self.parsed_interface.info:
             table_row = []
             configured_interface = f"{ actual_interface }"
-            if configured_interface in self.device.custom.interfaces:
+            if configured_interface in self.device.interfaces:
                 table_row.append(self.device.alias)
                 table_row.append(configured_interface)
                 table_row.append('Passed')
@@ -171,7 +171,7 @@ class Test_Cisco_IOS_XE_Intent(aetest.Testcase):
         for actual_interface in self.parsed_interface.info:
             configured_interface_list.append(f"{ actual_interface }")
         self.missing_interfaces = []
-        for intended_interface in self.device.custom.interfaces:
+        for intended_interface in self.device.interfaces:
             table_row = []
             if intended_interface in configured_interface_list:
                 table_row.append(self.device.alias)
@@ -436,7 +436,7 @@ class Test_Interfaces(aetest.Testcase):
         table_data = []
         for self.intf,value in self.parsed_interfaces.info.items():
             if 'description' in value:
-                for interface,intent_value in self.device.custom.interfaces.items():
+                for interface,intent_value in self.device.interfaces.items():
                     if self.intf == interface:
                         self.intended_desc = intent_value['description']
                         actual_desc = value['description']
@@ -454,7 +454,7 @@ class Test_Interfaces(aetest.Testcase):
                             table_row.append('Passed')
                         table_data.append(table_row)
             else:
-                for interface,intent_value in self.device.custom.interfaces.items():
+                for interface,intent_value in self.device.interfaces.items():
                     if self.intf == interface:
                         self.intended_desc = intent_value['description']
                         actual_desc = ""

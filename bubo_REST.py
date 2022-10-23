@@ -292,7 +292,7 @@ class Test_Cisco_IOS_XE_Native(aetest.Testcase):
             for actual_key in actual_value:
                 table_row = []
                 configured_interface = f"{ actual_interface }{ actual_key['name'] }"
-                if configured_interface in self.device.custom.interfaces:
+                if configured_interface in self.device.interfaces:
                     table_row.append(self.device.alias)
                     table_row.append(configured_interface)
                     table_row.append('Passed')
@@ -323,7 +323,7 @@ class Test_Cisco_IOS_XE_Native(aetest.Testcase):
             for actual_key in actual_value:
                 configured_interface_list.append(f"{ actual_interface }{ actual_key['name'] }")
         self.missing_interfaces = []
-        for intended_interface in self.device.custom.interfaces:
+        for intended_interface in self.device.interfaces:
             table_row = []
             if intended_interface in configured_interface_list:
                 table_row.append(self.device.alias)
@@ -743,7 +743,7 @@ class Test_Interfaces(aetest.Testcase):
         table_data = []
         for self.intf in self.parsed_json['openconfig-interfaces:interfaces']['interface']:
             if 'description' in self.intf['config']:
-                for interface,value in self.device.custom.interfaces.items():
+                for interface,value in self.device.interfaces.items():
                     if self.intf['name'] == interface:
                         self.intended_desc = value['description']
                         actual_desc = self.intf['config']['description']
@@ -761,7 +761,7 @@ class Test_Interfaces(aetest.Testcase):
                             table_row.append('Passed')
                         table_data.append(table_row)
             else:
-                for interface,value in self.device.custom.interfaces.items():
+                for interface,value in self.device.interfaces.items():
                     if self.intf['name'] == interface:
                         self.intended_desc = value['description']
                         actual_desc = ""
