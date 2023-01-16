@@ -436,12 +436,12 @@ class Test_Interfaces(aetest.Testcase):
         table_data = []
         for self.intf,value in self.parsed_interfaces.info.items():
             if 'description' in value:
-                for interface,intent_value in self.device.interfaces.items():
+                for interface,intent_value in self.device.custom.interfaces.items():
                     if self.intf == interface:
                         self.intended_desc = intent_value['description']
                         actual_desc = value['description']
                         table_row = []
-                        table_row.append(self.device.alias)
+                        table_row.append(intent_value['description'])
                         table_row.append(self.intf)
                         table_row.append(self.intended_desc)
                         table_row.append(actual_desc)
@@ -454,12 +454,12 @@ class Test_Interfaces(aetest.Testcase):
                             table_row.append('Passed')
                         table_data.append(table_row)
             else:
-                for interface,intent_value in self.device.interfaces.items():
+                for interface,intent_value in self.device.custom.interfaces.items():
                     if self.intf == interface:
                         self.intended_desc = intent_value['description']
                         actual_desc = ""
                         table_row = []
-                        table_row.append(self.device.alias)
+                        table_row.append(intent_value['description'])
                         table_row.append(self.intf)
                         table_row.append(self.intended_desc)
                         table_row.append(actual_desc)
